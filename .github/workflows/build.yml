@@ -22,9 +22,12 @@ jobs:
     - name: install dependencies
       run: ./ubuntu-install-deps.sh
     - name: make
-      run: make
-    - uses: actions/upload-artifact@v4
+      run: make IMAGE_NAME=tinos2ce
+    - uses: actions/upload-artifact@v7
       with:
-        name: tinos2
-        path: ./bin/tinos2.iso
+        name: tinos2ce
+        path: |
+          bin/*.iso
+          !bin/*.elf
+          !bin/kernel/
         retention-days: 10
