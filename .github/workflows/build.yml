@@ -1,7 +1,8 @@
 name: C/C++ CI
 
-dispatch:
-  workflow_dispatch:
+
+workflow_dispatch:
+
 on:
   push:
     branches: [ "main" ]
