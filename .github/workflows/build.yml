@@ -1,0 +1,29 @@
+name: C/C++ CI
+
+dispatch:
+  workflow_dispatch:
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: set up permissions
+      run: sudo chmod +x ubuuntu-install-deps.sh
+    - name: install dependencies
+      run: ./ubuntu-install-deps.sh
+    - name: make
+      run: make
+    - uses: actions/upload-artifact@v7
+      with:
+        path: bin/tinos2.iso
+        name: tinos2.iso
+        retention-days: 10
