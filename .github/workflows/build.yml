@@ -25,6 +25,6 @@ jobs:
       run: make
     - uses: actions/upload-artifact@v7
       with:
-        path: bin/tinos2.iso
+        path: ./bin/tinos2.iso
         name: tinos2.iso
         retention-days: 10
