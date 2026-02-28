@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Build and upload tinos2 ISO
 
 
 
@@ -23,7 +23,7 @@ jobs:
       run: ./ubuntu-install-deps.sh
     - name: make
       run: make
-    - uses: actions/upload-artifact@v7
+    - uses: actions/upload-artifact@v4
       with:
         name: tinos2
         path: ./bin/tinos2.iso
