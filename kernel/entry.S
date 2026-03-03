@@ -29,11 +29,8 @@ stack_bottom:
 stack_top:         
 
 
-gdt_ptr:
-    dw (3 * 8) - 1   
-    dd gdt_table     
-
-gdt_table:
-    dq 0
-    dq 0x00cf9a000000ffff
-    dq 0x00cf92000000ffff
+global idt_flush
+idt_flush:
+    mov eax, [esp+4]  ; Hae idt_p osoite pinosta
+    lidt [eax]        ; Lataa IDT
+    ret
