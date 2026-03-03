@@ -19,6 +19,7 @@ struct multiboot_header_t mboot_header = {
 
 
 
+
 void _main(struct multiboot_info_t *mboot_info, uint32_t mboot_magic) { 
     init_gdt();
     init_idt();

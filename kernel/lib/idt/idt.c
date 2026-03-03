@@ -1,8 +1,11 @@
 #include "idt.h"
 
+extern void isr0();
+extern void isr1();
 
 idt_entry_t idt[256];
 idt_ptr_t idt_p;
+
 
 
 
@@ -16,13 +19,17 @@ void idt_set_gate(uint8_t num, uint32_t base, uint16_t sel, uint8_t flags) {
     idt[num].flags     = flags; 
 }
 
-void init_idt() {
+void init_idt() {   
     idt_p.limit = (sizeof(idt_entry_t) * 256) - 1;
     idt_p.base  = (uint32_t)&idt;
 
     memset(&idt, 0, sizeof(idt_entry_t) * 256);
 
     extern void idt_flush(uint32_t idt_ptr_addr);
+
+    idt_set_gate(32, (uint32_t)isr0, 0x08, 0x8E);
+    idt_set_gate(33, (uint32_t)isr1, 0x08, 0x8E);
+
     idt_flush((uint32_t)&idt_p);
 
 }
