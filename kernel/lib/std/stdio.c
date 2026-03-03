@@ -13,6 +13,10 @@ void outb(unsigned short port, unsigned char val) {
     __asm__ volatile ("outb %0, %1" : : "a"(val), "Nd"(port));
 }
 
+void io_wait(void) {
+    asm volatile ( "outb %%al, $0x80" : : "a"(0) );
+}
+
 //defines for vga stuff
 //also defines variables
 #define VGA_WIDTH 80

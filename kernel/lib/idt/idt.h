@@ -14,7 +14,7 @@ struct idt_entry_struct {
 typedef struct idt_entry_struct idt_entry_t;
 
 
-idt_entry_t idt[256];
+
 
 
 struct idt_ptr_struct {
@@ -24,10 +24,14 @@ struct idt_ptr_struct {
 
 typedef struct idt_ptr_struct idt_ptr_t;
 
-idt_ptr_t idt_p;
+extern idt_entry_t idt[256];
+extern idt_ptr_t idt_p;
+
 
 void idt_set_gate(uint8_t num, uint32_t base, uint16_t sel, uint8_t flags);
 
 void init_idt();
+
+
 
 #endif

@@ -17,7 +17,7 @@ struct gdt_entry_struct {
 typedef struct gdt_entry_struct gdt_entry_t;
 
 
-gdt_entry_t gdt[3];
+extern gdt_entry_t gdt[3];
 
 
 struct gdt_ptr_struct {
@@ -27,7 +27,7 @@ struct gdt_ptr_struct {
 
 typedef struct gdt_ptr_struct gdt_ptr_t;
 
-gdt_ptr_t gdt_p; 
+extern gdt_ptr_t gdt_p; 
 
 void gdt_set_gate(int32_t num, uint32_t base, uint32_t limit, uint8_t access, uint8_t gran);
 
