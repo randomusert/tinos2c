@@ -31,6 +31,6 @@ stack_top:
 
 global idt_flush
 idt_flush:
-    mov eax, [esp+4]  ; Hae idt_p osoite pinosta
-    lidt [eax]        ; Lataa IDT
+    mov eax, [esp+4]  
+    lidt [eax]        
     ret

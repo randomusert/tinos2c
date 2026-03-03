@@ -1,5 +1,7 @@
 #include "idt.h"
 
+extern void idt_flush(uint32_t idt_ptr_addr);
+
 void idt_set_gate(uint8_t num, uint32_t base, uint16_t sel, uint8_t flags) {
     idt[num].base_low  = base & 0xFFFF;
     idt[num].base_high = (base >> 16) & 0xFFFF;
@@ -14,5 +16,7 @@ void init_idt() {
 
     memset(&idt, 0, sizeof(idt_entry_t) * 256);
 
+    extern void idt_flush(uint32_t idt_ptr_addr);
     idt_flush((uint32_t)&idt_p);
+
 }
