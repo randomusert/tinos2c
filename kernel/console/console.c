@@ -4,7 +4,6 @@
 
 
 void console() {
-    //console. finally!
     char buffer[128];
     int pos = 0;
 
