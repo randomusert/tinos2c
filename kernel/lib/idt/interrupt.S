@@ -41,3 +41,10 @@ isr_common_stub:
     popa                     
     add esp, 8            
     iret                     
+
+section .text
+global idt_flush
+idt_flush:
+    mov eax, [esp+4]  
+    lidt [eax]        
+    ret

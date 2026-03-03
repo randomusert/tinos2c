@@ -1,8 +1,9 @@
 #include <lib/std/types.h>
 #include "gdt.h"
 
-gdt_entry_t gdt[3];
+gdt_entry_t gdt[3] __attribute__((aligned(16)));
 gdt_ptr_t gdt_p; 
+extern void gdt_flush(uint32_t gdt_ptr_addr);
 
 void gdt_set_gate(int32_t num, uint32_t base, uint32_t limit, uint8_t access, uint8_t gran) {
     gdt[num].base_low    = (base & 0xFFFF);
@@ -27,5 +28,5 @@ void init_gdt() {
 
     gdt_set_gate(2, 0, 0xFFFFFFFF, 0x92, 0xCF);
 
-    __asm__ volatile("lgdt (%0)" : : "r" (&gdt_p));
+    gdt_flush((uint32_t)&gdt_p);
 }
