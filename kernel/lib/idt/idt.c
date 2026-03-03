@@ -1,4 +1,5 @@
 #include "idt.h"
+#include <lib/std/string.h>
 
 extern void isr0();
 extern void isr1();
