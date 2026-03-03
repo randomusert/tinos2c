@@ -6,32 +6,18 @@
 #define STATUS_PORT   0x64
 
 uint8_t keyboard_read_scancode() {
-    while ((inb(STATUS_PORT) & 1) == 0); // Wait for key press
-    /*print("[");
-    uint8_t scancode = inb(KEYBOARD_PORT);
-    print(scancode);
-    putchar(":");
-    print(scancode);
-    putchar(']');*/
+    while ((inb(STATUS_PORT) & 1) == 0);
     return inb(KEYBOARD_PORT);
 }
 
-char scancode_to_ascii(unsigned char scancode) {
-    static char scancode_table[] = {
-        0, 27, '1', '2', '3', '4', '5', '6',
-        '7', '8', '9', '0', '-', '=', '\b', /* Backspace */
-        '\t', /* Tab */
-        'q', 'w', 'e', 'r', /* 0x10 */
-        't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\n', 0,
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-        '\'', '`', 0, '\\', 'z', 'x', 'c', 'v', 'b', 'n',
-        'm', ',', '.', '/', 0, '*', 0, ' ', /* 0x39 = Space */
-        // You can fill in more if needed
+char scancode_to_ascii(uint8_t scancode) {
+    static char kbd_map[] = {
+        0,  27, '1', '2', '3', '4', '5', '6', '7', '8',	'9', '0', '-', '=', '\b',
+        '\t', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\n',
+        0, 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', '`', 0,
+        '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', 0, '*',
+        0, ' '
     };
-
-    if (scancode > sizeof(scancode_table)) {
-        return 0;
-    }
-
-    return scancode_table[scancode];
+    if (scancode < sizeof(kbd_map)) return kbd_map[scancode];
+    return 0;
 }

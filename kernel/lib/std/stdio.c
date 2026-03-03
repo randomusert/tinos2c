@@ -1,6 +1,7 @@
 #include <lib/std/stdio.h>
 #include <lib/std/types.h>
 #include <lib/scancodes.h>
+#include <drivers/keyboard/keyboard.h>
 
 
 unsigned char inb(unsigned short port) {
@@ -134,4 +135,14 @@ int strcmp(const char* s1, const char* s2) {
         s2++;
     }
     return *(const unsigned char*)s1 - *(const unsigned char*)s2;
+}
+
+char getchar() {
+    uint8_t scancode = 0;
+    while ((scancode = kbd_pop()) == 0) {
+        asm volatile("hlt"); 
+    }
+    
+
+    return scancode_to_ascii(scancode);
 }
