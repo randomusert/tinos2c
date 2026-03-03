@@ -1,5 +1,6 @@
 #include <lib/multiboot.h>
 #include <lib/std/stdio.h>
+#include "console/console.h"
 
 
 
@@ -15,7 +16,8 @@ struct multiboot_header_t mboot_header = {
 
 
 void _main(struct multiboot_info_t *mboot_info, uint32_t mboot_magic) { 
-    // Display memory information
+    console();
+
     print("Booted successfully!\n");
     print("Welcome to tinos2 C edition v0.0.1 alpha build\n");
     print("Copyright (C) 2026 randomusert all rights reserved.\n\n");
