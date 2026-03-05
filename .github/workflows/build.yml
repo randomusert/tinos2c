@@ -23,6 +23,8 @@ jobs:
       run: ./ubuntu-install-deps.sh
     - name: make
       run: make IMAGE_NAME=tinos2ce
+    - name: ls
+      run: ls -l bin/
     - uses: actions/upload-artifact@v7
       with:
         name: tinos2ce
