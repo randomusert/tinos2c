@@ -3,7 +3,6 @@
 #include <lib/scancodes.h>
 #include <drivers/keyboard/keyboard.h>
 
-
 unsigned char inb(unsigned short port) {
     unsigned char ret;
     __asm__ volatile ("inb %1, %0" : "=a"(ret) : "Nd"(port));
@@ -18,8 +17,6 @@ void io_wait(void) {
     asm volatile ( "outb %%al, $0x80" : : "a"(0) );
 }
 
-//defines for vga stuff
-//also defines variables
 #define VGA_WIDTH 80
 #define VGA_HEIGHT 60
 #define VGA_MEMORY ((unsigned short*)0xb8000)
@@ -28,7 +25,6 @@ volatile uint16_t* vga_buffer = (uint16_t*)0xB8000;
 
 int cursor_x = 0;
 int cursor_y = 0;
-
 
 void putchar(char c) {
     if (c == '\n') {
@@ -56,7 +52,6 @@ void putchar(char c) {
     update_cursor(cursor_x, cursor_y);  // ← ADD THIS
 }
 
-
 void scroll_screen() {
     for (int y = 1; y < VGA_HEIGHT; y++) {
         for (int x = 0; x < VGA_WIDTH; x++) {
@@ -75,7 +70,6 @@ void print(const char* str) {
         putchar(str[i]);
     }
 }
-
 
 void update_cursor(int x, int y) {
     uint16_t pos = y * VGA_WIDTH + x;
@@ -97,37 +91,29 @@ void clear_screen() {
     update_cursor(cursor_x, cursor_y);
 }
 
-
 uint16_t vga_entry(char c, uint8_t color) {
     return ((uint16_t)color << 8) | (uint8_t)c;
 }
-
-
 
 void scanf(char* buffer, size_t max_len) {
     size_t i = 0;
     while (i < max_len - 1) {
         uint8_t scancode = keyboard_read_scancode();
         
-        // For simplicity: handle only letter keys, Enter, Backspace
-        if (scancode == 0x1C) { // Enter key
+        if (scancode == 0x1C) {
             break;
-        } else if (scancode == 0x0E && i > 0) { // Backspace
+        } else if (scancode == 0x0E && i > 0) {
             i--;
             buffer[i] = '\0';
-            // Optional: print backspace to console
         } else {
-            // Map scancode to ASCII (very basic)
-            char c = scancode_to_ascii(scancode); // Implement this
+            char c = scancode_to_ascii(scancode);
             if (c) {
                 buffer[i++] = c;
-                // Optional: echo character to screen
             }
         }
     }
     buffer[i] = '\0';
 }
-
 
 int strcmp(const char* s1, const char* s2) {
     while (*s1 && (*s1 == *s2)) {
@@ -142,7 +128,6 @@ char getchar() {
     while ((scancode = kbd_pop()) == 0) {
         asm volatile("hlt"); 
     }
-    
-
     return scancode_to_ascii(scancode);
 }
+

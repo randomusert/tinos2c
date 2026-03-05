@@ -6,18 +6,13 @@
 
 
 void isr_handler(struct regs  *r) {
-   
     if (r->int_no == 33) {
-        
         uint8_t scancode = inb(0x60); 
-
         if (!(scancode & 0x80))
         {
             kbd_push(scancode);
         }
-        
     }
-
 
     if (r->int_no >= 32) {
         if (r->int_no >= 40) {
