@@ -1,5 +1,5 @@
 #include <lib/idt/interrupt.h>
-#include <stdint.h>
+
 #include <lib/pic/pic.h>
 #include <drivers/keyboard/keyboard.h>
 

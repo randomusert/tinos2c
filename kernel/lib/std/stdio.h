@@ -2,6 +2,7 @@
 #define STDIO_H
 
 #include <lib/std/types.h>
+typedef unsigned int size_t;
 
 unsigned char inb(unsigned short port);
 void outb(unsigned short port, unsigned char val);

@@ -1,7 +1,7 @@
 #ifndef GDT_H
 #define GDT_H
 
-#include <stdint.h>
+#include <lib/std/types.h>
 
 
 struct gdt_entry_struct {
