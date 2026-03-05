@@ -1,4 +1,4 @@
-TINOS License v1.0
+TINOS License v1.1
 
 Copyright (c) 2026 randomusert
 
@@ -16,6 +16,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 
 4. You may not sell the Software or modified versions that are rebranded of this software, unless granted explicit written permission by the copyright holder.
+
+5. You must use this license for modified versions of this software.
 
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY...
