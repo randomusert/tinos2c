@@ -11,4 +11,5 @@ void help_cmd() {
     print("ver - Show OS version\n");
     print("help - Show this help message\n");
     print("halt - Halt the system\n");
+    print("clear - Clear the screen\n");
 }

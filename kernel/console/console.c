@@ -12,7 +12,7 @@ void console() {
     while (1) {
         char c = read_char();
         if (!c) continue;
-        
+
         if (c == '\b') {
             if (pos > 0) {
                 pos--;
@@ -32,7 +32,11 @@ void console() {
             } if (strcmp(buffer, "halt") == 0)
             {
                 while (1) asm volatile ("hlt");
-            } else {
+            } if (strcmp(buffer, "clear") == 0)
+            {
+                clear_screen();
+            }
+             else {
                 print("Unknown command: ");
                 print(buffer);
                 print("\n");
