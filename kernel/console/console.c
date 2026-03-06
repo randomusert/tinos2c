@@ -27,16 +27,15 @@ void console() {
             if (strcmp(buffer, "ver") == 0) {
                 print("TINOS2 0.1 alpha 4\n");
                 print("Build: 10\n");
-            } if (strcmp(buffer, "help") == 0) {
+            } else if (strcmp(buffer, "help") == 0) {
                 help_cmd();
-            } if (strcmp(buffer, "halt") == 0)
+            } else if (strcmp(buffer, "halt") == 0)
             {
                 while (1) asm volatile ("hlt");
-            } if (strcmp(buffer, "clear") == 0)
+            } else if (strcmp(buffer, "clear") == 0)
             {
                 clear_screen();
-            }
-             else {
+            } else {
                 print("Unknown command: ");
                 print(buffer);
                 print("\n");
