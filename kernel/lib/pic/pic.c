@@ -1,6 +1,6 @@
 #include "pic.h"
 #include <lib/std/stdio.h>
-
+// PIC remap function
 void pic_remap(int offset1, int offset2) {
     uint8_t a1, a2;
     a1 = 0xFF; 

@@ -2,7 +2,7 @@
 #include <lib/std/types.h>
 #include <lib/scancodes.h>
 #include <drivers/keyboard/keyboard.h>
-
+// I/O port functions inb and outb
 unsigned char inb(unsigned short port) {
     unsigned char ret;
     __asm__ volatile ("inb %1, %0" : "=a"(ret) : "Nd"(port));
@@ -12,11 +12,11 @@ unsigned char inb(unsigned short port) {
 void outb(unsigned short port, unsigned char val) {
     __asm__ volatile ("outb %0, %1" : : "a"(val), "Nd"(port));
 }
-
+//wait for I/O operation to complete
 void io_wait(void) {
     asm volatile ( "outb %%al, $0x80" : : "a"(0) );
 }
-
+// VGA stuff
 #define VGA_WIDTH 80
 #define VGA_HEIGHT 60
 #define VGA_MEMORY ((unsigned short*)0xb8000)
@@ -25,7 +25,7 @@ volatile uint16_t* vga_buffer = (uint16_t*)0xB8000;
 
 int cursor_x = 0;
 int cursor_y = 0;
-
+// put 1 charapter on the screen
 void putchar(char c) {
     if (c == '\n') {
         cursor_x = 0;
@@ -49,9 +49,9 @@ void putchar(char c) {
         cursor_y = VGA_HEIGHT - 1;
     }
 
-    update_cursor(cursor_x, cursor_y);  // ← ADD THIS
+    update_cursor(cursor_x, cursor_y);
 }
-
+//scroll screen one line up
 void scroll_screen() {
     for (int y = 1; y < VGA_HEIGHT; y++) {
         for (int x = 0; x < VGA_WIDTH; x++) {
@@ -64,13 +64,13 @@ void scroll_screen() {
         vga_buffer[(VGA_HEIGHT - 1) * VGA_WIDTH + x] = vga_entry(' ', 0x07);
     }
 }
-
+//print string
 void print(const char* str) {
     for (int i = 0; str[i] != '\0'; i++) {
         putchar(str[i]);
     }
 }
-
+//update cursor pos
 void update_cursor(int x, int y) {
     uint16_t pos = y * VGA_WIDTH + x;
 
@@ -79,7 +79,7 @@ void update_cursor(int x, int y) {
     outb(0x3D4, 0x0E);
     outb(0x3D5, (uint8_t)((pos >> 8) & 0xFF));
 }
-
+//clear screen
 void clear_screen() {
     for (int y = 0; y < VGA_HEIGHT; y++) {
         for (int x = 0; x < VGA_WIDTH; x++) {
@@ -94,7 +94,7 @@ void clear_screen() {
 uint16_t vga_entry(char c, uint8_t color) {
     return ((uint16_t)color << 8) | (uint8_t)c;
 }
-
+//take user imput
 void scanf(char* buffer, size_t max_len) {
     size_t i = 0;
     while (i < max_len - 1) {
@@ -114,7 +114,7 @@ void scanf(char* buffer, size_t max_len) {
     }
     buffer[i] = '\0';
 }
-
+//string compare
 int strcmp(const char* s1, const char* s2) {
     while (*s1 && (*s1 == *s2)) {
         s1++;
@@ -122,7 +122,7 @@ int strcmp(const char* s1, const char* s2) {
     }
     return *(const unsigned char*)s1 - *(const unsigned char*)s2;
 }
-
+//get a charapter from user input
 char getchar() {
     uint8_t scancode = 0;
     while ((scancode = kbd_pop()) == 0) {

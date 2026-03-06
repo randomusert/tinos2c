@@ -6,6 +6,7 @@ extern void isr1();
 idt_entry_t idt[256] __attribute__((aligned(16)));
 idt_ptr_t idt_p;
 extern void idt_flush(uint32_t idt_ptr_addr);
+//Set IDT gate
 void idt_set_gate(uint8_t num, uint32_t base, uint16_t sel, uint8_t flags) {
     idt[num].base_low  = base & 0xFFFF;
     idt[num].base_high = (base >> 16) & 0xFFFF;
@@ -13,6 +14,7 @@ void idt_set_gate(uint8_t num, uint32_t base, uint16_t sel, uint8_t flags) {
     idt[num].always0   = 0;
     idt[num].flags     = flags; 
 }
+// Initialize the IDT
 void init_idt() {   
     idt_p.limit = (sizeof(idt_entry_t) * 256) - 1;
     idt_p.base  = (uint32_t)&idt;

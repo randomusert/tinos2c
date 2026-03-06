@@ -4,7 +4,7 @@
 #include <drivers/keyboard/keyboard.h>
 
 
-
+// Common ISR handler
 void isr_handler(struct regs  *r) {
     if (r->int_no == 33) {
         uint8_t scancode = inb(0x60); 
