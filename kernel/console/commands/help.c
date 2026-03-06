@@ -12,4 +12,5 @@ void help_cmd() {
     print("help - Show this help message\n");
     print("halt - Halt the system\n");
     print("clear - Clear the screen\n");
+    print("guessnum - Play the number guessing game\n");
 }

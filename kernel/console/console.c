@@ -2,6 +2,7 @@
 #include <lib/std/stdio.h>
 #include "../drivers/keyboard/handler.h"
 #include "commands/help.h"
+#include <apps/games/number_guess.h>
 
 void console() {
     char buffer[128];
@@ -35,6 +36,9 @@ void console() {
             } else if (strcmp(buffer, "clear") == 0)
             {
                 clear_screen();
+            }else if (strcmp(buffer, "guessnum") == 0)
+            {
+                game_number_guess();
             } else {
                 print("Unknown command: ");
                 print(buffer);
