@@ -5,7 +5,7 @@ labels: ["bug"]
 
 assignees:
   - ranodmusert
-type: bug
+
 body:
   - type: markdown
     attributes:
