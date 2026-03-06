@@ -27,3 +27,7 @@ if you want, you can contribute by adding feature
 
 # found issues?
 if you found issues you can report them.
+
+
+# google groups group
+Hi. We now have g groups group. Come have a chat with us over on: https://groups.google.com/g/tinos-operating-system
