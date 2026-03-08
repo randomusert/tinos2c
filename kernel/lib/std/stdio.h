@@ -15,5 +15,6 @@ void clear_screen();
 uint16_t vga_entry(char c, uint8_t color);
 void scanf(char* buffer, size_t max_len);
 int strcmp(const char* s1, const char* s2);
+char getchar();
 
 #endif

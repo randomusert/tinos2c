@@ -13,4 +13,5 @@ void help_cmd() {
     print("halt - Halt the system\n");
     print("clear - Clear the screen\n");
     print("guessnum - Play the number guessing game\n");
+    print("feattest - Run feature tests console\n");
 }

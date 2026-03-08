@@ -3,6 +3,7 @@
 #include "../drivers/keyboard/handler.h"
 #include "commands/help.h"
 #include <apps/games/number_guess.h>
+#include "commands/feature_test/feat_test.h"
 
 void console() {
     char buffer[128];
@@ -39,7 +40,11 @@ void console() {
             }else if (strcmp(buffer, "guessnum") == 0)
             {
                 game_number_guess();
-            } else {
+            }else if (strcmp(buffer, "feattest") == 0)
+            {
+                feat_test();
+            }
+             else {
                 print("Unknown command: ");
                 print(buffer);
                 print("\n");
