@@ -19,7 +19,7 @@ void game_number_guess(void) {
 
     print("Guess a number between 1 and 100:\n");
 
-    int num = rand_range(1, 100); // TODO: replace with RNG later
+    int num = rand_range(1, 100);
 
     char buffer[16];
     int pos = 0;
