@@ -5,12 +5,14 @@ Copyright (c) 2026 randomusert
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to use, copy, modify, and build upon the Software, subject to the following conditions:
 
 1. Attribution Requirement
+
 All copies or substantial portions of the Software must include:
 - This copyright notice
 - This permission notice
 - Clear attribution to the original project: "TINOS by randomusert"
 
 2. Modification and Redistribution
+
 You may modify and redistribute the Software, including derivative works, provided that:
 - The derived work must not be presented as the original Software.
 - The derived work must not imply official association with the original project unless explicitly permitted.
@@ -33,6 +35,7 @@ Redistribution of the Software or modified versions is allowed only if:
 Commercial use is permitted, provided all conditions of this license are met.
 
 6. No Warranty
+
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE SOFTWARE OR ITS USE.
