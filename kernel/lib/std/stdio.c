@@ -131,3 +131,28 @@ char getchar() {
     return scancode_to_ascii(scancode);
 }
 
+void print_int(int num) {
+    char buf[16];
+    int i = 0;
+
+    if (num == 0) {
+        print("0");
+        return;
+    }
+
+    if (num < 0) {
+        print("-");
+        num = -num;
+    }
+
+    while (num > 0) {
+        buf[i++] = '0' + (num % 10);
+        num /= 10;
+    }
+
+    // reverse
+    for (int j = i - 1; j >= 0; j--) {
+        char c[2] = {buf[j], 0};
+        print(c);
+    }
+}

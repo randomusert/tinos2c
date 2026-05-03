@@ -29,7 +29,9 @@ void console() {
 
             if (strcmp(buffer, "ver") == 0) {
                 print("TINOS2 0.1 alpha 4\n");
-                print("Build: " + TINOS_BUILD);
+                print("Build: ");
+                print_int(TINOS_BUILD);
+                print("\n");
             } else if (strcmp(buffer, "help") == 0) {
                 help_cmd();
             } else if (strcmp(buffer, "halt") == 0)

@@ -5,7 +5,7 @@ BUILD=$((BUILD + 1))
 
 echo $BUILD > build.txt
 
-echo "#define TINOS_BUILD $BUILD" > ./kernel/lib/build.h
+echo "#define TINOS_BUILD "$BUILD"" > ./kernel/lib/build.h
 
 # build step here
 # make / gcc / etc.
