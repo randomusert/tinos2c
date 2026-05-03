@@ -19,10 +19,13 @@ jobs:
 
     - name: set up permissions
       run: sudo chmod +x ./install_tools/ubuntu-install-deps.sh
+    - name: set up permissions
+      run: sudo chmod +x ./Build.sh
+
     - name: install dependencies
       run: ./install_tools/ubuntu-install-deps.sh
     - name: make
-      run: make IMAGE_NAME=tinos2ce
+      run: ./Build.sh
     - uses: actions/upload-artifact@v7
       with:
         name: tinos2ce
