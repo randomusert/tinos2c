@@ -1,5 +1,6 @@
 #include "feat_test.h"
 #include <console/commands/feature_test/rand_test.h>
+#include <console/commands/feature_test/crash_test.h>
 
 void feat_test() {
     char buffer[128];
@@ -27,9 +28,12 @@ void feat_test() {
                 print("This command is used to test various features of the kernel with the C library implementation.\n");
                 print("Available tests:\n");
                 print(" - rand: Test the random number generator\n");
+                print(" - crash: Test the crash handling system\n");
                 print(" - exit: Exit the feature test console\n");
             } else if (strcmp(buffer, "rand") == 0) {
                 rand_test();
+            } else if (strcmp(buffer, "crash") == 0) {
+                crash_test_cmd();
             } else if (strcmp(buffer, "exit") == 0) {
                 break;
             } else {
