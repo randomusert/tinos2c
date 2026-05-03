@@ -16,8 +16,12 @@ CCFLAGS = -m32 -std=gnu11 -ffreestanding -Wall -Wextra -nostdlib -I kernel -fno-
 QEMUFLAGS = -debugcon stdio -cdrom bin/$(IMAGE_NAME).iso -boot d
 LDFLAGS = -m elf_i386 -Tkernel/linker.ld -z noexecstack
 
+
+#Build number for the image file.
+BUILD_NUMBER = 10
+
 # Output image name
-IMAGE_NAME = tinos2
+IMAGE_NAME = tinos2-build-$(BUILD_NUMBER)
 
 all: boot kernel iso
 
