@@ -5,6 +5,8 @@
 #include <apps/games/number_guess.h>
 #include "commands/feature_test/feat_test.h"
 #include <lib/build.h>
+#include <lib/info.h>
+#include "commands/ver.h"
 
 void console() {
     char buffer[128];
@@ -28,7 +30,14 @@ void console() {
             print("\n");
 
             if (strcmp(buffer, "ver") == 0) {
-                print("TINOS2 0.1 alpha 4\n");
+                ver_cmd();
+            } else if (strcmp(buffer, "help") == 0) {
+                help_cmd();
+            } else if (strcmp(buffer, "halt") == 0)
+            {
+                while (1) asm volatile ("hlt");
+            } else if (strcmp(buffer, "clear") == 0)
+            {
                 print("Build: ");
                 print_int(TINOS_BUILD);
                 print("\n");
