@@ -43,8 +43,7 @@ void console() {
             }else if (strcmp(buffer, "feattest") == 0)
             {
                 feat_test();
-            }
-             else {
+            } else {
                 print("Unknown command: ");
                 print(buffer);
                 print("\n");
