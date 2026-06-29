@@ -7,3 +7,4 @@
 # 0.1-alpha7
 ## Additions
 * Init messages
+* Try or install menu
