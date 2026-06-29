@@ -9,6 +9,7 @@ ICommand help_command = {
 void help_cmd() {
     print("Available commands:\n");
     print("ver - Show OS version\n");
+    print("build - Show build number\n");
     print("help - Show this help message\n");
     print("halt - Halt the system\n");
     print("clear - Clear the screen\n");

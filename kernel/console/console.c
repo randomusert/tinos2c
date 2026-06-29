@@ -36,7 +36,7 @@ void console() {
             } else if (strcmp(buffer, "halt") == 0)
             {
                 while (1) asm volatile ("hlt");
-            } else if (strcmp(buffer, "clear") == 0)
+            } else if (strcmp(buffer, "build") == 0)
             {
                 print("Build: ");
                 print_int(TINOS_BUILD);
