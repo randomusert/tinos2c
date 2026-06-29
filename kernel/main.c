@@ -15,14 +15,36 @@ struct multiboot_header_t mboot_header = {
     .checksum = -(MULTIBOOT_MAGIC + MULTIBOOT_FLAGS)
 };
 
-void _main(struct multiboot_info_t *mboot_info, uint32_t mboot_magic) { 
+void sys_init() {
+    print("System Init starting...\n");
+
+    print("Initializing interrupts\n");
+
     init_gdt();
     init_idt();
+
+    print("Interrupts initialized\n");
+
+    print("Remapping the PIC\n");
+
     pic_remap(0x20, 0x28); // Remap PIC:
+
+    print("PIC remapped\n");
+
+    print("Enabling interrupts\n");
 
     asm volatile("sti"); // Enable interrupts after PIC remapping
 
+    print("Enabled interrupts\n");
+
+    print("Loading console\n");
+
     console();
 
-        
 }
+
+void _main(struct multiboot_info_t *mboot_info, uint32_t mboot_magic) { 
+    
+    sys_init();
+}
+
