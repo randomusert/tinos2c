@@ -1,9 +1,9 @@
 #pragma once
 
-#include <uacpi/types.h>
-#include <uacpi/status.h>
-#include <uacpi/kernel_api.h>
-#include <uacpi/namespace.h>
+#include "./types.h"
+#include "./status.h"
+#include "./kernel_api.h"
+#include "./namespace.h"
 
 #define UACPI_MAJOR 6
 #define UACPI_MINOR 0

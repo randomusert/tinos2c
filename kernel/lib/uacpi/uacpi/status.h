@@ -1,7 +1,7 @@
 #pragma once
 
-#include <uacpi/internal/compiler.h>
-#include <uacpi/platform/types.h>
+#include "./internal/compiler.h"
+#include "./platform/types.h"
 
 #ifdef __cplusplus
 extern "C" {

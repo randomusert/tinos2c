@@ -1,10 +1,10 @@
 #pragma once
 
-#include <uacpi/status.h>
-#include <uacpi/platform/types.h>
-#include <uacpi/platform/compiler.h>
-#include <uacpi/platform/arch_helpers.h>
-#include <uacpi/platform/config.h>
+#include "./status.h"
+#include "./platform/types.h"
+#include "./platform/compiler.h"
+#include "./platform/arch_helpers.h"
+#include "./platform/config.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <uacpi/types.h>
-#include <uacpi/status.h>
+#include "./types.h"
+#include "./status.h"
 
 #ifdef __cplusplus
 extern "C" {

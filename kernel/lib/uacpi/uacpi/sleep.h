@@ -1,8 +1,8 @@
 #pragma once
 
-#include <uacpi/types.h>
-#include <uacpi/status.h>
-#include <uacpi/uacpi.h>
+#include "./types.h"
+#include "./status.h"
+#include "./uacpi.h"
 
 #ifdef __cplusplus
 extern "C" {

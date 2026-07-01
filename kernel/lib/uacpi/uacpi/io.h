@@ -1,6 +1,6 @@
 #pragma once
 
-#include <uacpi/types.h>
+#include "./types.h"
 
 // Forward declared to reduce pollution, include acpi.h if needed
 struct acpi_gas;
