@@ -156,3 +156,18 @@ void print_int(int num) {
         print(c);
     }
 }
+
+void halt() {
+    while (1)
+    {
+        asm volatile ("hlt");
+    }
+    
+}
+
+void unimplemented(const char *feature) {
+    print("Feature not implemented: ");
+    print(feature);
+    print("\nSystem halted.\n");
+    halt();
+}

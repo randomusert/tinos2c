@@ -12,6 +12,10 @@ void console() {
     char buffer[128];
     int pos = 0;
 
+    
+    print("console loaded\n");
+    print("Welcome to Tinos2CE! Type 'help' to see available commands\n");
+
     print(">");
 
     while (1) {
