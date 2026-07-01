@@ -4,8 +4,8 @@
 #include "uacpi_config.h"
 #else
 
-#include <uacpi/helpers.h>
-#include <uacpi/log.h>
+#include "../helpers.h"
+#include "../log.h"
 
 /*
  * =======================

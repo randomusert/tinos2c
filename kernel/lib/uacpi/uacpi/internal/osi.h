@@ -1,6 +1,6 @@
 #pragma once
 
-#include <uacpi/osi.h>
+#include "../osi.h"
 
 uacpi_status uacpi_initialize_interfaces(void);
 void uacpi_deinitialize_interfaces(void);

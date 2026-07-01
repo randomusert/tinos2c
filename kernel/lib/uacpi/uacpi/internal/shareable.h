@@ -1,6 +1,6 @@
 #pragma once
 
-#include <uacpi/types.h>
+#include "../types.h"
 
 struct uacpi_shareable {
     uacpi_u32 reference_count;

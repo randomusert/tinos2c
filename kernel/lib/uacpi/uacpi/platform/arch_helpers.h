@@ -4,7 +4,7 @@
 #include "uacpi_arch_helpers.h"
 #else
 
-#include <uacpi/platform/atomic.h>
+#include "../platform/atomic.h"
 
 #ifndef UACPI_ARCH_FLUSH_CPU_CACHE
 #define UACPI_ARCH_FLUSH_CPU_CACHE() do {} while (0)

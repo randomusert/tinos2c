@@ -1,3 +1,3 @@
 #pragma once
 
-#include <uacpi/platform/compiler.h>
+#include "../platform/compiler.h"

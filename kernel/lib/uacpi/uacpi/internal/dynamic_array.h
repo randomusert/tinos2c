@@ -1,8 +1,8 @@
 #pragma once
 
-#include <uacpi/types.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/kernel_api.h>
+#include "../types.h"
+#include "../internal/stdlib.h"
+#include "../kernel_api.h"
 
 #define DYNAMIC_ARRAY_WITH_INLINE_STORAGE(name, type, inline_capacity)       \
     struct name {                                                            \
@@ -182,4 +182,6 @@
         return name##_at(arr, arr->size_including_inline - 1);               \
     }                                                                        \
                                                                              \
-    DYNAMIC_ARRAY_CLEAR_FN(name, type, prefix)
+    DYNAMIC_ARRAY_CLEAR_FN(name, type, prefix);
+
+

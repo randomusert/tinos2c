@@ -1,9 +1,9 @@
 #pragma once
 
-#include <uacpi/types.h>
-#include <uacpi/internal/shareable.h>
-#include <uacpi/status.h>
-#include <uacpi/namespace.h>
+#include "../types.h"
+#include "../internal/shareable.h"
+#include "../status.h"
+#include "../namespace.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

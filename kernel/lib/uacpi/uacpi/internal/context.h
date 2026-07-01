@@ -1,11 +1,11 @@
 #pragma once
 
-#include <uacpi/acpi.h>
-#include <uacpi/types.h>
-#include <uacpi/uacpi.h>
-#include <uacpi/internal/dynamic_array.h>
-#include <uacpi/internal/shareable.h>
-#include <uacpi/context.h>
+#include "../acpi.h"
+#include "../types.h"
+#include "../uacpi.h"
+#include "../internal/dynamic_array.h"
+#include "../internal/shareable.h"
+#include "../context.h"
 
 struct uacpi_runtime_context {
     /*

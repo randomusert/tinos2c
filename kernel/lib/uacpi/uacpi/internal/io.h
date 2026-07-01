@@ -1,8 +1,8 @@
 #pragma once
 
-#include <uacpi/internal/types.h>
-#include <uacpi/acpi.h>
-#include <uacpi/io.h>
+#include "../internal/types.h"
+#include "../acpi.h"
+#include "../io.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

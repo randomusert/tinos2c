@@ -1,8 +1,8 @@
 #pragma once
 
-#include <uacpi/platform/compiler.h>
-#include <uacpi/helpers.h>
-#include <uacpi/types.h>
+#include "./platform/compiler.h"
+#include "./helpers.h"
+#include "./types.h"
 
 /**
  * -----------------------------------------------------

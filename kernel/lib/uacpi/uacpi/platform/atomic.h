@@ -17,7 +17,7 @@
 #include "uacpi_atomic.h"
 #else
 
-#include <uacpi/platform/compiler.h>
+#include "../platform/compiler.h"
 
 #if defined(_MSC_VER) && !defined(__clang__)
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <uacpi/internal/types.h>
-#include <uacpi/notify.h>
+#include "../internal/types.h"
+#include "../notify.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

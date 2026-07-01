@@ -1,8 +1,8 @@
 #pragma once
 
-#include <uacpi/kernel_api.h>
-#include <uacpi/internal/context.h>
-#include <uacpi/log.h>
+#include "../kernel_api.h"
+#include "../internal/context.h"
+#include "../log.h"
 
 #ifdef UACPI_FORMATTED_LOGGING
 #define uacpi_log uacpi_kernel_log

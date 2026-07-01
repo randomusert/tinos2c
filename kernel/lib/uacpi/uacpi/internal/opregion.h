@@ -1,7 +1,7 @@
 #pragma once
 
-#include <uacpi/internal/types.h>
-#include <uacpi/opregion.h>
+#include "types.h"
+#include "../opregion.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

@@ -1,10 +1,10 @@
 #pragma once
 
-#include <uacpi/internal/context.h>
-#include <uacpi/internal/interpreter.h>
-#include <uacpi/types.h>
-#include <uacpi/status.h>
-#include <uacpi/tables.h>
+#include "../internal/context.h"
+#include "../internal/interpreter.h"
+#include "../types.h"
+#include "../status.h"
+#include "../tables.h"
 
 struct uacpi_installed_table {
     uacpi_phys_addr phys_addr;

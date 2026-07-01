@@ -1,6 +1,6 @@
 #pragma once
 
-#include <uacpi/types.h>
+#include "../types.h"
 
 typedef uacpi_u16 uacpi_aml_op;
 

@@ -1,10 +1,10 @@
 #pragma once
 
-#include <uacpi/internal/types.h>
-#include <uacpi/internal/helpers.h>
-#include <uacpi/platform/libc.h>
-#include <uacpi/platform/config.h>
-#include <uacpi/kernel_api.h>
+#include  "../internal/types.h"
+#include  "../internal/helpers.h"
+#include  "../platform/libc.h"
+#include  "../platform/config.h"
+#include "../kernel_api.h"
 
 #ifdef UACPI_USE_BUILTIN_STRING
 

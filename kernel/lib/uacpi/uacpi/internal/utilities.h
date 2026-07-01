@@ -1,9 +1,9 @@
 #pragma once
 
-#include <uacpi/types.h>
-#include <uacpi/utilities.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/stdlib.h>
+#include "../types.h"
+#include "../utilities.h"
+#include "../internal/log.h"
+#include "../internal/stdlib.h"
 
 static inline uacpi_phys_addr uacpi_truncate_phys_addr_with_warn(uacpi_u64 large_addr)
 {

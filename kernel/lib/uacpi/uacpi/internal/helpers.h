@@ -1,6 +1,6 @@
 #pragma once
 
-#include <uacpi/helpers.h>
+#include "../helpers.h"
 
 #define UACPI_ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 

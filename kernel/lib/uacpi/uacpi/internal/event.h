@@ -1,6 +1,6 @@
 #pragma once
 
-#include <uacpi/event.h>
+#include "../event.h"
 
 // This fixed event is internal-only, and we don't expose it in the enum
 #define UACPI_FIXED_EVENT_GLOBAL_LOCK 0
