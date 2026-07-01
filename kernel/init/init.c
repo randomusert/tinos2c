@@ -31,6 +31,8 @@ void sysInit(void) {
 
     print("Loading console\n");
 
+    clear_screen();
+
     console();
 
 }
