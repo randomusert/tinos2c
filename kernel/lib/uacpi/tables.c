@@ -1,8 +1,8 @@
-#include <uacpi/internal/tables.h>
-#include <uacpi/internal/utilities.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/internal/interpreter.h>
-#include <uacpi/internal/mutex.h>
+#include "uacpi/internal/tables.h"
+#include "uacpi/internal/utilities.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/internal/interpreter.h"
+#include "uacpi/internal/mutex.h"
 
 DYNAMIC_ARRAY_WITH_INLINE_STORAGE(
     table_array, struct uacpi_installed_table, UACPI_STATIC_TABLE_ARRAY_LEN

@@ -1,10 +1,10 @@
-#include <uacpi/internal/registers.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/internal/context.h>
-#include <uacpi/internal/io.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/platform/atomic.h>
-#include <uacpi/acpi.h>
+#include "uacpi/internal/registers.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/internal/context.h"
+#include "uacpi/internal/io.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/platform/atomic.h"
+#include "uacpi/acpi.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

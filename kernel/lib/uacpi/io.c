@@ -1,10 +1,10 @@
-#include <uacpi/internal/io.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/opregion.h>
-#include <uacpi/internal/utilities.h>
-#include <uacpi/internal/mutex.h>
-#include <uacpi/internal/namespace.h>
+#include "uacpi/internal/io.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/internal/opregion.h"
+#include "uacpi/internal/utilities.h"
+#include "uacpi/internal/mutex.h"
+#include "uacpi/internal/namespace.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

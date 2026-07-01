@@ -1,4 +1,4 @@
-#include <uacpi/internal/opcodes.h>
+#include "uacpi/internal/opcodes.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

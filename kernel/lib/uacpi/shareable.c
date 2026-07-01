@@ -1,6 +1,6 @@
-#include <uacpi/internal/shareable.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/platform/atomic.h>
+#include "uacpi/internal/shareable.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/platform/atomic.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

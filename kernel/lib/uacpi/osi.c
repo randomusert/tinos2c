@@ -1,10 +1,10 @@
-#include <uacpi/platform/atomic.h>
-#include <uacpi/internal/osi.h>
-#include <uacpi/internal/helpers.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/internal/utilities.h>
-#include <uacpi/internal/mutex.h>
-#include <uacpi/kernel_api.h>
+#include "uacpi/platform/atomic.h"
+#include "uacpi/internal/osi.h"
+#include "uacpi/internal/helpers.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/internal/utilities.h"
+#include "uacpi/internal/mutex.h"
+#include "uacpi/kernel_api.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

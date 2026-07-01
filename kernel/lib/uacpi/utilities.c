@@ -1,11 +1,11 @@
-#include <uacpi/types.h>
-#include <uacpi/status.h>
-#include <uacpi/uacpi.h>
+#include "uacpi/types.h"
+#include "uacpi/status.h"
+#include "uacpi/uacpi.h"
 
-#include <uacpi/internal/context.h>
-#include <uacpi/internal/utilities.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/namespace.h>
+#include "uacpi/internal/context.h"
+#include "uacpi/internal/utilities.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/internal/namespace.h"
 
 enum char_type {
     CHAR_TYPE_CONTROL = 1 << 0,

@@ -1,11 +1,11 @@
-#include <uacpi/platform/atomic.h>
-#include <uacpi/internal/mutex.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/registers.h>
-#include <uacpi/internal/context.h>
-#include <uacpi/internal/io.h>
-#include <uacpi/kernel_api.h>
-#include <uacpi/internal/namespace.h>
+#include "uacpi/platform/atomic.h"
+#include "uacpi/internal/mutex.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/internal/registers.h"
+#include "uacpi/internal/context.h"
+#include "uacpi/internal/io.h"
+#include "uacpi/kernel_api.h"
+#include "uacpi/internal/namespace.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

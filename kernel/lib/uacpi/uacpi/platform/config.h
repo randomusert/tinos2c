@@ -64,7 +64,7 @@ UACPI_BUILD_BUG_ON_WITH_MSG(
  * Convenience initialization/deinitialization hooks that will be called by
  * uACPI automatically when appropriate if compiled-in.
  */
-// #define UACPI_KERNEL_INITIALIZATION
+ #define UACPI_KERNEL_INITIALIZATION
 
 /*
  * Makes kernel api logging callbacks work with unformatted printf-style
@@ -108,7 +108,7 @@ UACPI_BUILD_BUG_ON_WITH_MSG(
  * compiling uACPI may theoretically generate implicit dependencies on them
  * even if this option is defined.
  */
-// #define UACPI_USE_BUILTIN_STRING
+ #define UACPI_USE_BUILTIN_STRING
 
 /*
  * Turns uacpi_phys_addr and uacpi_io_addr into a 32-bit type, and adds extra
@@ -145,7 +145,7 @@ UACPI_BUILD_BUG_ON_WITH_MSG(
  *   ECAM, etc., but doesn't yet have enough subsystems implemented in order
  *   to run a fully-featured AML interpreter.
  */
-// #define UACPI_BAREBONES_MODE
+ #define UACPI_BAREBONES_MODE
 
 /*
  * =============

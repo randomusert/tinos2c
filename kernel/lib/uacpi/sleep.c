@@ -1,10 +1,10 @@
-#include <uacpi/sleep.h>
-#include <uacpi/internal/context.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/io.h>
-#include <uacpi/internal/registers.h>
-#include <uacpi/internal/event.h>
-#include <uacpi/platform/arch_helpers.h>
+#include "uacpi/sleep.h"
+#include "uacpi/internal/context.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/internal/io.h"
+#include "uacpi/internal/registers.h"
+#include "uacpi/internal/event.h"
+#include "uacpi/platform/arch_helpers.h"
 
 #ifndef UACPI_BAREBONES_MODE
 

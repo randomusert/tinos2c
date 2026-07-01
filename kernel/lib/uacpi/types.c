@@ -1,12 +1,12 @@
-#include <uacpi/types.h>
-#include <uacpi/internal/types.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/internal/shareable.h>
-#include <uacpi/internal/dynamic_array.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/namespace.h>
-#include <uacpi/internal/tables.h>
-#include <uacpi/kernel_api.h>
+#include "uacpi/types.h"
+#include "uacpi/internal/types.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/internal/shareable.h"
+#include "uacpi/internal/dynamic_array.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/internal/namespace.h"
+#include "uacpi/internal/tables.h"
+#include "uacpi/kernel_api.h"
 
 const uacpi_char *uacpi_address_space_to_string(
     enum uacpi_address_space space

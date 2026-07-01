@@ -1,15 +1,15 @@
-#include <uacpi/internal/event.h>
-#include <uacpi/internal/registers.h>
-#include <uacpi/internal/context.h>
-#include <uacpi/internal/io.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/namespace.h>
-#include <uacpi/internal/interpreter.h>
-#include <uacpi/internal/notify.h>
-#include <uacpi/internal/utilities.h>
-#include <uacpi/internal/mutex.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/acpi.h>
+#include "uacpi/internal/event.h"
+#include "uacpi/internal/registers.h"
+#include "uacpi/internal/context.h"
+#include "uacpi/internal/io.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/internal/namespace.h"
+#include "uacpi/internal/interpreter.h"
+#include "uacpi/internal/notify.h"
+#include "uacpi/internal/utilities.h"
+#include "uacpi/internal/mutex.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/acpi.h"
 
 #define UACPI_EVENT_DISABLED 0
 #define UACPI_EVENT_ENABLED 1

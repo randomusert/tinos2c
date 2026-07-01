@@ -1,13 +1,13 @@
-#include <uacpi/namespace.h>
-#include <uacpi/internal/namespace.h>
-#include <uacpi/internal/types.h>
-#include <uacpi/internal/stdlib.h>
-#include <uacpi/internal/interpreter.h>
-#include <uacpi/internal/opregion.h>
-#include <uacpi/internal/log.h>
-#include <uacpi/internal/utilities.h>
-#include <uacpi/internal/mutex.h>
-#include <uacpi/kernel_api.h>
+#include "uacpi/namespace.h"
+#include "uacpi/internal/namespace.h"
+#include "uacpi/internal/types.h"
+#include "uacpi/internal/stdlib.h"
+#include "uacpi/internal/interpreter.h"
+#include "uacpi/internal/opregion.h"
+#include "uacpi/internal/log.h"
+#include "uacpi/internal/utilities.h"
+#include "uacpi/internal/mutex.h"
+#include "uacpi/kernel_api.h"
 
 #ifndef UACPI_BAREBONES_MODE
 
