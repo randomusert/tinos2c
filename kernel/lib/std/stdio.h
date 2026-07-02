@@ -1,7 +1,7 @@
 #ifndef STDIO_H
 #define STDIO_H
 
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 typedef unsigned int size_t;
 
 unsigned char inb(unsigned short port);

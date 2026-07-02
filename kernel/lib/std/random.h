@@ -1,7 +1,7 @@
 #ifndef RANDOM_H
 #define RANDOM_H
 
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 
 void srand(uint32_t seed);
 uint32_t rand();

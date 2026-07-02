@@ -1,6 +1,6 @@
 #include "handler.h"
 #include <lib/std/stdio.h>
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 char read_char() {
     static const char scancode_table[128] = {
         0,  27, '1','2','3','4','5','6','7','8','9','0','-','=', '\b',

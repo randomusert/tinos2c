@@ -1,7 +1,7 @@
 #ifndef INTERRUPT_H
 #define INTERRUPT_H
 
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 #include <lib/std/stdio.h>
 
 struct regs {

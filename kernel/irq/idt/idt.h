@@ -1,6 +1,6 @@
 #ifndef IDT_H
 #define IDT_H
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 struct idt_entry_struct {
     uint16_t base_low;  
     uint16_t sel;       

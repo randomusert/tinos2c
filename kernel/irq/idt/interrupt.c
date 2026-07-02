@@ -1,6 +1,6 @@
-#include <lib/idt/interrupt.h>
+#include <irq/idt/interrupt.h>
 
-#include <lib/pic/pic.h>
+#include <irq/pic/pic.h>
 #include <drivers/keyboard/keyboard.h>
 
 
