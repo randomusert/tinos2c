@@ -1,6 +1,6 @@
 #include "scancodes.h"
 #include <lib/std/stdio.h>
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 
 #define KEYBOARD_PORT 0x60
 #define STATUS_PORT   0x64

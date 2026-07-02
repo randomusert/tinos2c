@@ -1,6 +1,6 @@
 #include "ver.h"
-#include <lib/info.h>
-#include <lib/build.h>
+#include <info/info.h>
+#include <info/build.h>
 #include <lib/std/stdio.h>
 
 void ver_cmd() {

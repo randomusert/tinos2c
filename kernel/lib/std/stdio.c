@@ -1,5 +1,5 @@
 #include <lib/std/stdio.h>
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 #include <lib/scancodes.h>
 #include <drivers/keyboard/keyboard.h>
 // I/O port functions inb and outb

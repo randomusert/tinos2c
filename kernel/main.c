@@ -3,8 +3,8 @@
 #include "console/console.h"
 #include <lib/pic/pic.h>
 #include <lib/std/string.h>
-#include <lib/idt/idt.h>
-#include <lib/gdt/gdt.h>
+#include <irq/idt/idt.h>
+#include <irq/gdt/gdt.h>
 
 // Do not change or remove the multiboot header, as it is required for GRUB to load the kernel correctly.
 // The multiboot header must be placed in the first 8KB of the kernel image, and it must be aligned to a 4-byte boundary.

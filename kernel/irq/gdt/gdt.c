@@ -1,4 +1,4 @@
-#include <lib/std/types.h>
+#include <lib/std/stdint.h>
 #include "gdt.h"
 
 gdt_entry_t gdt[3] __attribute__((aligned(16)));

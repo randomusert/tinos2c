@@ -4,8 +4,8 @@
 #include "commands/help.h"
 #include <apps/games/number_guess.h>
 #include "commands/feature_test/feat_test.h"
-#include <lib/build.h>
-#include <lib/info.h>
+#include <info/build.h>
+#include <info/info.h>
 #include "commands/ver.h"
 
 void console() {
