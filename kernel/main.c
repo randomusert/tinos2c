@@ -1,7 +1,7 @@
 #include <lib/multiboot.h>
 #include <lib/std/stdio.h>
 #include "console/console.h"
-#include <lib/pic/pic.h>
+#include <irq/pic/pic.h>
 #include <lib/std/string.h>
 #include <irq/idt/idt.h>
 #include <irq/gdt/gdt.h>
